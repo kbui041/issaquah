@@ -8,24 +8,30 @@
 </head>
 <body>
 
-<nav>
-  <a class="wordmark" href="index.html">
-    <img src = "images/logo.png" alt = "Clinic Logo">
-  </a>
-
-  <ul class="nav-links">
-    <li><a href="team.html">Team</a></li>
-    <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="insurance.html">Insurances</a></li>
-    <li><a href="eye-library.html">Eye Library</a></li>
-    <li><a href="location&hours.html">Location & Hours</a></li>
-    <li><a href="hipaa.html">HIPAA</a></li>
-  </ul>
-
-
-  <a class="nav-cta" href="#">Request an Appointment</a>
-</nav>
-
+  <nav>
+    <a class="wordmark" href="index.html">
+      <img src="images/logo.png" alt="Clinic Logo">
+    </a>
+  
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="team.html">Team</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="insurance.html">Insurances</a></li>
+        <li><a href="eye-library.html">Eye Library</a></li>
+        <li><a href="location&hours.html">Location &amp; Hours</a></li>
+        <li><a href="hipaa.html">HIPAA</a></li>
+      </ul>
+  
+      <a class="nav-cta" href="#">Request an Appointment</a>
+    </div>
+  </nav>
 <section class="services-page">
 
     <div class="services-header">
@@ -189,6 +195,14 @@
     </section>
   
   </section>
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+  
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+  </script>
 
 </body>
 
