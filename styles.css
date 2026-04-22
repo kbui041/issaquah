@@ -251,7 +251,7 @@ nav {
 
 .home-hero h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(3.5rem, 8vw, 5rem);
   line-height: 0.95;
   font-weight: 450;
   letter-spacing: -0.04em;
@@ -771,7 +771,7 @@ nav {
 }
 
 .footer-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -867,6 +867,47 @@ nav {
   background: rgba(255, 255, 255, 0.04);
   margin-bottom: 14px;
   opacity: 0.96;
+}
+
+/* ─── SCROLL TO TOP ───────────────────────────────────── */
+
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: #AFC1CF;
+  color: #f5f2ec;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, background .2s ease, transform .2s ease;
+  z-index: 200;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+}
+
+.scroll-top svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
