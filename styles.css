@@ -16,6 +16,13 @@ body {
   background: var(--bg);
   font-family: 'Montserrat', serif;
   color: var(--ink);
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 
@@ -492,73 +499,66 @@ nav {
 
 
 /* ─── SERVICES ────────────────────────────────────────── */
-
+.service-layout .service-image,
+.service-layout.reverse .service-image {
+  align-self: start;
+}
 .services-page {
   padding: 70px 20px;
 }
-
 .service-block {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 0;
   border-bottom: 1px solid #e3e7ed;
 }
-
-.service-layout {
+.service-layout,
+.service-layout.reverse {
   display: grid;
   grid-template-columns: 400px 1fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
-
-.service-layout.reverse {
-  grid-template-columns: 1fr 400px;
-}
-
 .service-layout .service-image {
   grid-column: 1;
   justify-self: start;
 }
-
 .service-layout .service-text {
   grid-column: 2;
 }
-
 .service-layout.reverse .service-text {
   grid-column: 1;
+  order: -1;
 }
-
 .service-layout.reverse .service-image {
   grid-column: 2;
   justify-self: end;
+  order: 1;
 }
-
 .service-image {
   width: 100%;
   max-width: 400px;
   border-radius: 14px;
   display: block;
 }
-
+.service-text {
+  max-width: 400px;
+  justify-self: end;
+}
 .service-text h2 {
   margin-bottom: 12px;
 }
-
 .service-text h3 {
   margin-top: 18px;
   margin-bottom: 10px;
 }
-
 .service-text ul {
   padding-left: 22px;
 }
-
 .service-text li {
   margin-bottom: 8px;
   line-height: 1.6;
 }
-
-
 
 /* ─── EYE LIBRARY ─────────────────────────────────────── */
 
@@ -600,6 +600,11 @@ nav {
   grid-template-columns: 400px 1fr;
 }
 
+.topic-layout, 
+.topic-layout.reverse {
+  grid-template-columns: 1fr 400px;
+}
+
 .topic-layout .topic-text {
   grid-column: 1;
 }
@@ -607,6 +612,7 @@ nav {
 .topic-layout .topic-image {
   grid-column: 2;
   justify-self: end;
+  /* order: -1; */
 }
 
 .topic-layout.reverse .topic-image {
