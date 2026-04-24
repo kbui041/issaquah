@@ -806,7 +806,7 @@ nav {
   bottom: 0;
   width: 32px;
   height: 2px;
-  background: rgba(255,255,255,0.25);
+  background: var(--accent);
 }
 
 .footer-column p {
